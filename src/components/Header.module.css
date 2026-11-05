@@ -1,0 +1,189 @@
+/* Pinned to the top: sticky inside the page wrapper, so it never leaves the
+   viewport but still keeps its own space and the hero isn't covered. */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--wine);
+  color: var(--cream);
+  border-bottom: 1px solid var(--bronze);
+  padding: 18px 24px;
+  transition:
+    padding 0.45s var(--ease-out),
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Once the page scrolls a little, the header slims down and turns to
+   frosted glass. */
+.scrolled {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(78, 14, 27, 0.62);
+  border-bottom-color: rgba(228, 199, 143, 0.28);
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+}
+
+.brand:hover {
+  opacity: 1;
+}
+
+.logoWrap {
+  display: block;
+  width: 72px;
+  height: 72px;
+  transition: margin 0.45s var(--ease-out);
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  display: block;
+  border-radius: 50%;
+  transition:
+    transform 0.45s var(--ease-out),
+    box-shadow 0.45s var(--ease-out);
+}
+
+/* In the slim header the logo keeps its size and drops down, so the lower
+   half of the circle hangs below the header's edge like a medallion. The
+   negative margins take it out of the header's height. */
+.scrolled .logoWrap {
+  margin-block: -14px;
+}
+
+.scrolled .logo {
+  transform: translateY(22px);
+  box-shadow:
+    0 0 0 1px rgba(228, 199, 143, 0.45),
+    0 10px 22px -8px rgba(0, 0, 0, 0.6);
+}
+
+.brandName {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+  font-size: 15px;
+}
+
+/* Gold underline grows from the right (RTL start) on hover. */
+.navLink {
+  position: relative;
+  padding: 10px 0;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 8px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease-out);
+}
+
+.navLink:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.cta {
+  min-height: 44px;
+  padding: 0 24px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+/* Phones: logo, links and the call button all stay on one line. */
+@media (max-width: 600px) {
+  .header {
+    padding: 10px 16px;
+  }
+
+  .scrolled {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .inner {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .logoWrap,
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .scrolled .logoWrap {
+    margin-block: -4px;
+  }
+
+  .scrolled .logo {
+    transform: translateY(20px);
+  }
+
+  .brandName {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .nav {
+    flex-wrap: nowrap;
+    gap: 16px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .cta {
+    flex-shrink: 0;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}
+
+/* Narrowest phones: the logo carries the brand on its own. */
+@media (max-width: 370px) {
+  .brandName {
+    display: none;
+  }
+}

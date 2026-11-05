@@ -1,0 +1,12 @@
+{
+  "name": "لاوین کیک",
+  "type": "backend",
+  "port": 3100,
+  "build": "npm run build",
+  "start": "npm run start",
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "3100"
+  },
+  "autoStart": true
+}

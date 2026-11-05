@@ -1,0 +1,16 @@
+.wrap {
+  background: var(--wine);
+  line-height: 0;
+}
+
+.pour {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: clamp(200px, 26.4vw, 450px);
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}

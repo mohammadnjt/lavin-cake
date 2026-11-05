@@ -1,0 +1,108 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+.plate {
+  position: relative;
+  flex: 0 0 auto;
+  width: 260px;
+  height: 260px;
+}
+
+.photoWrap {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+}
+
+.photo {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  box-sizing: border-box;
+  display: block;
+  box-shadow:
+    0 0 0 16px rgba(78, 14, 27, 1),
+    0 0 0 17px rgba(228, 199, 143, 0.45);
+  transition: box-shadow 0.5s var(--ease-out);
+}
+
+.row:hover .photo {
+  box-shadow:
+    0 0 0 16px rgba(78, 14, 27, 1),
+    0 0 0 17px rgba(228, 199, 143, 0.9),
+    0 0 40px 18px rgba(228, 199, 143, 0.18);
+}
+
+.price {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  padding: 5px 14px;
+  background: var(--gold);
+  color: var(--wine-darkest);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.reversed .price {
+  right: auto;
+  left: -14px;
+}
+
+.card {
+  flex: 0 1 480px;
+  min-width: 0;
+  background: var(--wine-deep);
+  padding: 28px 36px;
+  border-radius: 4px;
+  transition: background-color 0.4s ease;
+}
+
+.row:hover .card {
+  background: #470c19;
+}
+
+.name {
+  margin: 0 0 8px;
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--gold);
+}
+
+.description {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--cream);
+}
+
+@media (max-width: 720px) {
+  .row,
+  .reversed {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .card {
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

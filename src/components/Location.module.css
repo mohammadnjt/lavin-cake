@@ -1,0 +1,100 @@
+.location {
+  background: var(--wine-darkest);
+  color: var(--cream);
+  padding: 96px 24px 64px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px 96px;
+}
+
+.info {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gold);
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.detail {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.detailLast {
+  margin: 0;
+}
+
+.links {
+  flex: 0 1 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 22px;
+  border: 1px solid var(--bronze);
+  border-radius: 999px;
+  transition:
+    border-color 0.35s ease,
+    background-color 0.35s ease;
+}
+
+.pill:hover {
+  opacity: 1;
+  border-color: var(--gold-line);
+  background-color: rgba(228, 199, 143, 0.07);
+}
+
+.icon {
+  flex: none;
+  transition: transform 0.45s var(--ease-out);
+}
+
+.pill:hover .icon {
+  transform: scale(1.18) rotate(-8deg);
+}
+
+/* The design's border-top, drawn as its own line so it can animate. */
+.footer {
+  position: relative;
+  max-width: 1200px;
+  margin: 64px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid transparent;
+  font-size: 14px;
+  color: var(--cream);
+}
+
+.rule {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--bronze);
+  transform-origin: right;
+}
