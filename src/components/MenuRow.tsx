@@ -79,9 +79,11 @@ export function MenuRow({ item, reversed }: Props) {
         <motion.h3 className={styles.name} variants={text}>
           {item.name}
         </motion.h3>
-        <motion.p className={styles.description} variants={text}>
-          {item.description}
-        </motion.p>
+        {item.description && (
+          <motion.p className={styles.description} variants={text}>
+            {item.description}
+          </motion.p>
+        )}
       </motion.div>
     </motion.article>
   );

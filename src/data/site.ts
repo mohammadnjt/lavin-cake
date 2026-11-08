@@ -14,6 +14,16 @@ import zebra from "@/assets/images/menu/zebra.jpg";
 import chocolate from "@/assets/images/menu/chocolate.jpg";
 import appleCinnamon from "@/assets/images/menu/apple-cinnamon.jpg";
 import carrotWalnut from "@/assets/images/menu/carrot-walnut.jpg";
+import lemonCake from "@/assets/images/menu/lemon-cake.jpg";
+import brownie from "@/assets/images/menu/brwniw.jpg";
+import badome from "@/assets/images/menu/badome.jpg";
+import pomegranate from "@/assets/images/menu/pomgrenate.jpg";
+import saffron from "@/assets/images/menu/saffron.jpg";
+import nescafe from "@/assets/images/menu/nescafe.jpg";
+import redVelvet from "@/assets/images/menu/redvelbet.jpg";
+import samsepastian from "@/assets/images/menu/samsepastian.jpg";
+import kakaoo from "@/assets/images/menu/kakaoo.jpg";
+import threeMilkCaramel from "@/assets/images/menu/3milkkaramelnull.jpg";
 
 export const site = {
   name: "لاوین کیک",
@@ -42,9 +52,9 @@ export type MenuItem = {
 export const menu: MenuItem[] = [
   {
     id: "tres-leches-caramel",
-    name: "کیک سه شیر کاراملی",
+    name: "کیک سه شیر کارامل خامه‌ای",
     description: "کیک اسفنجی خیس‌خورده در سه نوع شیر، با رویهٔ کارامل و تزئین خامه.",
-    price: "1,600 تومان",
+    price: "1,700 تومان",
     image: tresLechesCaramel,
   },
   {
@@ -100,7 +110,7 @@ export const menu: MenuItem[] = [
     id: "afternoon-tea",
     name: "کیک Afternoon Tea",
     description: "کیک قالبی با روکش شکلات، خلال بادام و پسته.",
-    price: "1,500 تومان",
+    price: "1,600 تومان",
     image: afternoonTea,
   },
   {
@@ -138,4 +148,14 @@ export const menu: MenuItem[] = [
     price: "1,600 تومان",
     image: carrotWalnut,
   },
+  { id: "lemon-cake", name: "کیک لیمویی", description: "همراه با زست لیمو", price: "1,600 تومان", image: lemonCake },
+  { id: "brownie", name: "کیک براونی", description: "شکلات، کره", price: "1,600 تومان", image: brownie },
+  { id: "badome", name: "کیک کارامل بادام", description: "کیک قالبی با رویهٔ کارامل و تکه‌های بادام.", price: "1,700 تومان", image: badome },
+  { id: "pomegranate", name: "چیز‌کیک انار", description: "چیزکیک روی پایهٔ بیسکوییت، با رویهٔ ژلهٔ دانه‌های انار.", price: "1,700 تومان", image: pomegranate },
+  { id: "saffron", name: "کیک زعفرانی", description: "رویهٔ براق زعفرانی با خلال پسته و گل‌برگ گل محمدی.", price: "1,700 تومان", image: saffron },
+  { id: "nescafe", name: "کیک نسکافه‌ای", description: "کیک موس قهوه، با پودر کاکائو و تزئین خامه و گوی شکلاتی.", price: "1,700 تومان", image: nescafe },
+  { id: "red-velvet", name: "کیک رد ولوت", description: "کیک قرمز مخملی با پوشش خردهٔ کیک و تزئین پروانه.", price: "1,700 تومان", image: redVelvet },
+  { id: "samsepastian", name: "کیک سن سباستین", description: "چیزکیک باسکی با رویهٔ کاراملی‌شده و بافت نرم و کرمی.", price: "1,600 تومان", image: samsepastian },
+  { id: "kakaoo", name: "کیک شکلات کاکائو پودری", description: "موس شکلاتی روی پایهٔ کیک کاکائو، با پودر کاکائو و چیپس شکلات.", price: "1,700 تومان", image: kakaoo },
+  { id: "3milkkaramelnull", name: "کیک سه شیر کارامل", description: "کیک اسفنجی خیس‌خورده در سه نوع شیر، با رویهٔ کارامل مرمری.", price: "1,600 تومان", image: threeMilkCaramel },
 ];
